@@ -1,10 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-
-import ReactMarkdown from "react-markdown"
+import styled from "styled-components"
 import Moment from "react-moment"
-
-import Layout from "../components/layout"
+import ReactMarkdown from "react-markdown"
+import Layout from "./../components/Layout"
 
 export const query = graphql`
   query ArticleQuery($id: Int!) {
@@ -20,30 +19,30 @@ export const query = graphql`
   }
 `
 
+const StyledPostDate = styled.time`
+  color: #999;
+  font-weight: 400;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: right;
+`
+const StyledHeadline = styled.h1`
+  color: white;
+  background-color: black;
+  padding: 5px;
+`
+
 const Article = ({ data }) => {
   const article = data.strapiArticle
+
   return (
     <Layout>
-      <div>
-        <div
-          id="banner"
-          className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
-          data-src={article.image.publicURL}
-          data-srcset={article.image.publicURL}
-          data-uk-img
-        >
-          <h1>{article.title}</h1>
-        </div>
-
-        <div className="uk-section">
-          <div className="uk-container uk-container-small">
-            <ReactMarkdown source={article.content} />
-            <p>
-              <Moment format="MMM Do YYYY">{article.published_at}</Moment>
-            </p>
-          </div>
-        </div>
-      </div>
+      <StyledHeadline>{article.title}</StyledHeadline>
+      <ReactMarkdown source={article.content} />
+      <StyledPostDate>
+        <Moment format="MMM Do YYYY">{article.published_at}</Moment>
+      </StyledPostDate>
     </Layout>
   )
 }
