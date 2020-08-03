@@ -21,9 +21,16 @@ const StyledBlogItem = styled.li`
   font-size: 1.8rem;
   // text-decoration: none;
   margin-bottom: 0.5em;
+  background-color: white;
+  padding: 9px;
+  text-align: center;
 `
 const StyledBlogLink = styled(Link)`
-  color: red;
+  color: black;
+
+  &:hover {
+    color: blue;
+  }
 `
 
 const BlogListing = ({ article }) => {

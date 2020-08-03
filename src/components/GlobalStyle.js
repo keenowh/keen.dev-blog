@@ -22,14 +22,15 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto Mono', monospace;
     word-break: break-word;
     // white-space: pre-line;
-    background-color: #F0F5ED;
+    background-color: #202324;
     background-size: 40px 40px;
-   background-image:
-     linear-gradient(to right, grey 1px, transparent 1px),
-     linear-gradient(to bottom, grey 1px, transparent 1px);
+  //  background-image:
+    //  linear-gradient(to right, white 1px, transparent 1px),
+    background-image: radial-gradient(circle, white 1px, rgba(0, 0, 0, 0) 1px);
   }
 
   h1, h2, h3, h4, h5, h6 {
+    color: white;
     font-family: 'Rubik', sans-serif;
     margin: 0.5em 0;
   }

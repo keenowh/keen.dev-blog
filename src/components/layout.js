@@ -22,7 +22,7 @@ const StyledHeader = styled.header``
 
 const TitleLink = styled(Link)`
   text-transform: lowercase;
-  color: #000;
+  color: white;
   text-decoration: none;
   border: none;
 

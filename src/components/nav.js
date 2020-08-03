@@ -30,6 +30,8 @@ const ListElement = styled.li`
   padding: 0.5em;
   text-align: center;
   font-size: 1.8rem;
+  border-radius: 9px;
+  border: solid white 3px;
 
   @media (min-width: 300px) {
     font-size: 2.2rem;
@@ -42,7 +44,7 @@ const ListElement = styled.li`
   }
 
   @media (min-width: 520px) {
-    padding: 0;
+    padding: 7px;
     margin-right: 2rem;
     font-size: 2.4rem;
   }
@@ -56,16 +58,20 @@ const ListElement = styled.li`
       display: inline-block;
     }
   }
+
+  &:hover {
+    background-color: blue;
+  }
 `
 
 const NavItem = styled(Link).attrs({
   activeClassName,
 })`
-  color: black;
+  color: white;
   border: none;
-
+  padding: 2em;
   &:hover {
-    color: blue;
+    color: white;
   }
 
   &:before {
@@ -89,6 +95,11 @@ const Nav = () => {
         <ListElement>
           <NavItem to="/blog/" activeClassName={activeClassName}>
             blog
+          </NavItem>
+        </ListElement>
+        <ListElement>
+          <NavItem to="/projects/" activeClassName={activeClassName}>
+            project
           </NavItem>
         </ListElement>
       </StyledList>
