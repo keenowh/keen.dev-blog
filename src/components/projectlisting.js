@@ -24,34 +24,49 @@ const StyledProjectItem = styled.li`
   // display: flex;
   // flex-wrap: nowrap;
   // justify-content: space-between;
-  padding: 1em;
-  border: solid 2px white;
-  max-width: 25em;
+  // border: solid 2px white;
+  max-width: 300px;
+  min-width: 300px;
+  border-radius: 10px;
+  background-color: white;
 `
 
 const StyledLinkWrap = styled.span`
-  display: block;
-
+  display: inline-block;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
   @media (min-width: 550px) {
-    display: inline;
+    display: inline-block;
   }
 `
 
 const StyledProjectLink = styled(Link)`
   // display: inline-block;
   // flex-grow: 0;
+
+  color: white;
 `
 
 const StyledDesc = styled.p`
   // display: inline-block;
   // flex-grow: 1;
   // display: block;
+  padding: 10px;
+`
+
+const StyledContent = styled.div`
+  padding: 10px;
+  word-wrap: break-word;
 `
 
 const StyledTags = styled.span`
   background-color: blue;
   color: white;
-  margin-right: 3px;
+  margin-right: 1rem;
+  padding: 4px;
+  font-size: 1.5rem;
 `
 
 const ProjectListing = ({ projects }) => {
@@ -59,9 +74,13 @@ const ProjectListing = ({ projects }) => {
     // const tags = project.tags.tags.map((tag, index) => {
     //   <StyledTags key={index}>#{tag}</StyledTags>
     // })
-    const tagss = project.node.tags.tags.map(tag => {
-      return <StyledTags>#{tag}</StyledTags>
+    const tagss = project.node.tags.tags.map((tag, index) => {
+      return <StyledTags key={index}>#{tag}</StyledTags>
     })
+
+    const divStyle = {
+      padding: "1rem",
+    }
 
     return (
       <StyledProjectItem key={project.node.strapiId}>
@@ -73,8 +92,10 @@ const ProjectListing = ({ projects }) => {
             Github
           </StyledProjectLink>
         </StyledLinkWrap>
-        <div>{tagss}</div>
-        <StyledDesc>{project.node.description}</StyledDesc>
+        <StyledContent>
+          <StyledDesc>{project.node.description}</StyledDesc>
+        </StyledContent>
+        <div style={divStyle}>{tagss}</div>
       </StyledProjectItem>
     )
   })
