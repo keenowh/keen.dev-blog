@@ -30,7 +30,12 @@ const StyledPostDate = styled.time`
 const StyledHeadline = styled.h1`
   color: white;
   background-color: black;
-  padding: 5px;
+  padding: 10px;
+  text-align: center;
+`
+
+const StyledP = styled.p`
+  color: white;
 `
 
 const Article = ({ data }) => {
@@ -39,7 +44,10 @@ const Article = ({ data }) => {
   return (
     <Layout>
       <StyledHeadline>{article.title}</StyledHeadline>
-      <ReactMarkdown source={article.content} />
+      <StyledP>
+        <hr></hr>
+        <ReactMarkdown source={article.content} />
+      </StyledP>
       <StyledPostDate>
         <Moment format="MMM Do YYYY">{article.published_at}</Moment>
       </StyledPostDate>

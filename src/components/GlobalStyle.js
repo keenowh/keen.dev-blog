@@ -39,6 +39,12 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
 
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
   iframe {
     margin: 0 auto;
     display: block;
