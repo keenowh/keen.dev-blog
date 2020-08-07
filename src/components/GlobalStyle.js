@@ -149,7 +149,8 @@ const GlobalStyle = createGlobalStyle`
 
   .blog-section {
     font-size: 1.8rem;
-
+    color: white;
+    padding: 0 2em;
     &:not(:first-child) {
       margin-top: 2em;
     }
