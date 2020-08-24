@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import ProjectListing from "./ProjectListing"
+import ProjectListing from "./projectlisting"
 
 const StyledListingSection = styled.section`
   margin-bottom: 2em;
