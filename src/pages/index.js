@@ -35,9 +35,6 @@ const StyledSocialLinks = styled.a`
    color: white;
    padding: 1em;
    margin-top: 2em;
-   ${StyledSocialLinks}:hover {
-      background-color: blue;
-   }
 `
 
 const StyledLinkBlock = styled.div`
@@ -47,16 +44,16 @@ const StyledLinkBlock = styled.div`
 `
 const IndexPage = () => (
    <Layout>
-      <StyledContainer style={{textAlign: "center", color: "white"}}>
+      <StyledContainer style={{ textAlign: "center", color: "white" }}>
          <StyledHeading>Hello</StyledHeading>
          <StyledStatementBlock>
-            <h4 style={{margin: "0"}}>
+            <h4 style={{ margin: "0" }}>
                I'm Keen, a web-developer curious in the backend and cloud
                engineering
             </h4>
          </StyledStatementBlock>
          <StyledLinkBlock>
-            <p style={{color: "white"}}>Find me in one of these links: </p>
+            <p style={{ color: "white" }}>Find me in one of these links: </p>
             <StyledSocialLinks href="http://github.com/keenowh">
                Github
             </StyledSocialLinks>
@@ -64,7 +61,7 @@ const IndexPage = () => (
                LinkedIn
             </StyledSocialLinks>
          </StyledLinkBlock>
-         <p style={{color: "white"}}>Or contact me here:</p>
+         <p style={{ color: "white" }}>Or contact me here:</p>
          <div style={{ padding: "3em", margin: "auto" }}>
             Email: keenballon@gmail.com
          </div>

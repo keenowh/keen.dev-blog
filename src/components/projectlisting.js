@@ -97,7 +97,7 @@ const ProjectListing = ({ projects }) => {
       // const tags = project.tags.tags.map((tag, index) => {
       //   <StyledTags key={index}>#{tag}</StyledTags>
       // })
-      const tagss = project.node.tags.tags.map((tag, index) => {
+      const tagss = project.tags.tags.map((tag, index) => {
          return <StyledTags key={index}>#{tag}</StyledTags>
       })
 
@@ -106,22 +106,22 @@ const ProjectListing = ({ projects }) => {
       }
 
       return (
-         <StyledProjectItem key={project.node.strapiId}>
+         <StyledProjectItem key={project.id}>
             <div style={imageStyle}>
-               <img src={project.node.snapshot.publicURL}></img>
+               <img src={project.snapshot.url}></img>
             </div>
             <StyledLinkWrap>
-               <StyledProjectLink to={project.node.link}>
-                  {project.node.projectName}
+               <StyledProjectLink to={project.link}>
+                  {project.projectName}
                </StyledProjectLink>
             </StyledLinkWrap>
             <StyledLinkWrapGit>
-               <StyledProjectLink to={project.node.githubLink}>
+               <StyledProjectLink to={project.githubLink}>
                   Github
                </StyledProjectLink>
             </StyledLinkWrapGit>
             <StyledContent>
-               <StyledDesc>{project.node.description}</StyledDesc>
+               <StyledDesc>{project.description}</StyledDesc>
             </StyledContent>
             <div style={divStyle}>{tagss}</div>
          </StyledProjectItem>

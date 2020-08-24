@@ -6,7 +6,7 @@ import ProjectListingSection from "./../components/projectlistingsection"
 
 const ProjectsPageInner = props => {
    try {
-      const personalProjects = props.data.allStrapiProject.edges
+      const personalProjects = props.data.strapi.projects
       // console.log(props.data.allStrapiProject)
       return (
          <div>
@@ -37,21 +37,13 @@ export default ProjectsPage
 
 export const query = graphql`
    query {
-      allStrapiProject {
-         edges {
-            node {
-               projectName
-               strapiId
-               description
-               tags {
-                  tags
-               }
-               githubLink
-               link
-               snapshot {
-                  publicURL
-               }
-            }
+      strapi {
+         projects {
+            projectName
+            id
+            description
+            githubLink
+            link
          }
       }
    }

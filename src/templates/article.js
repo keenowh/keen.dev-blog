@@ -6,53 +6,51 @@ import ReactMarkdown from "react-markdown"
 import Layout from "./../components/Layout"
 
 export const query = graphql`
-  query ArticleQuery($id: Int!) {
-    strapiArticle(strapiId: { eq: $id }) {
-      strapiId
-      title
-      content
-      published_at
-      image {
-        publicURL
+   query($id: ID!) {
+      strapi {
+         article(id: $id) {
+            title
+            content
+            published_at
+         }
       }
-    }
-  }
+   }
 `
 
 const StyledPostDate = styled.time`
-  color: #999;
-  font-weight: 400;
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  text-align: right;
+   color: #999;
+   font-weight: 400;
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   text-align: right;
 `
 const StyledHeadline = styled.h1`
-  color: white;
-  background-color: black;
-  padding: 10px;
-  text-align: center;
+   color: white;
+   background-color: black;
+   padding: 10px;
+   text-align: center;
 `
 
 const StyledP = styled.p`
-  color: white;
+   color: white;
 `
 
 const Article = ({ data }) => {
-  const article = data.strapiArticle
+   const article = data.strapi.article
 
-  return (
-    <Layout>
-      <StyledHeadline>{article.title}</StyledHeadline>
-      <StyledP>
-        <hr></hr>
-        <ReactMarkdown source={article.content} />
-      </StyledP>
-      <StyledPostDate>
-        <Moment format="MMM Do YYYY">{article.published_at}</Moment>
-      </StyledPostDate>
-    </Layout>
-  )
+   return (
+      <Layout>
+         <StyledHeadline>{article.title}</StyledHeadline>
+            <hr></hr>
+         <StyledP>
+            <ReactMarkdown source={article.content} />
+         </StyledP>
+         <StyledPostDate>
+            <Moment format="MMM Do YYYY">{article.published_at}</Moment>
+         </StyledPostDate>
+      </Layout>
+   )
 }
 
 export default Article
