@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import Moment from "react-moment"
 import ReactMarkdown from "react-markdown"
-import Layout from "./../components/Layout"
+import Layout from "./../components/layout"
 
 export const query = graphql`
    query($id: ID!) {
@@ -42,7 +42,7 @@ const Article = ({ data }) => {
    return (
       <Layout>
          <StyledHeadline>{article.title}</StyledHeadline>
-            <hr></hr>
+         <hr></hr>
          <StyledP>
             <ReactMarkdown source={article.content} />
          </StyledP>
