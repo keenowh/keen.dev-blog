@@ -7,7 +7,11 @@ module.exports = {
       title: "keen.dev",
       description: "Blog",
       author: "Strapi team",
-      siteUrl: "http://",
+      // siteUrl: "http://",
+   },
+   flags: {
+      FAST_DEV: true,
+      FAST_REFRESH: true,
    },
    plugins: [
       {
@@ -34,17 +38,17 @@ module.exports = {
       },
       "gatsby-transformer-sharp",
       "gatsby-plugin-sharp",
-      {
-         resolve: `gatsby-plugin-manifest`,
-         options: {
-            name: "gatsby-starter-default",
-            short_name: "starter",
-            start_url: "/",
-            background_color: "#663399",
-            theme_color: "#663399",
-            display: "minimal-ui",
-         },
-      },
-      "gatsby-plugin-offline",
+      // {
+      //    resolve: `gatsby-plugin-manifest`,
+      //    options: {
+      //       name: "gatsby-starter-default",
+      //       short_name: "starter",
+      //       start_url: "/",
+      //       background_color: "#663399",
+      //       theme_color: "#663399",
+      //       display: "minimal-ui",
+      //    },
+      // },
+      // "gatsby-plugin-offline",
    ],
 }

@@ -7,7 +7,7 @@ import ProjectListingSection from "./../components/projectlistingsection"
 const ProjectsPageInner = props => {
    try {
       const personalProjects = props.data.strapi.projects
-      // console.log(props.data.allStrapiProject)
+      console.log(props.data.allStrapiProject)
       return (
          <div>
             <h1>Projects</h1>
