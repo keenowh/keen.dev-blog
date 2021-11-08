@@ -3,19 +3,17 @@ import styled from "styled-components"
 import ProjectListing from "./projectlisting"
 
 const StyledListingSection = styled.section`
-  margin-bottom: 2em;
+   margin-bottom: 2rem;
 `
 const StyledSectionHeading = styled.h2`
-  margin-bottom: 0;
+   margin-bottom: 0;
 `
 
-const ProjectListingSection = ({ projects, sectionTitle }) => {
-  return projects.length > 0 ? (
-    <StyledListingSection>
+const ProjectListingSection = ({ projects, sectionTitle }) => (
+   <StyledListingSection>
       <StyledSectionHeading>{sectionTitle}</StyledSectionHeading>
       <ProjectListing projects={projects} />
-    </StyledListingSection>
-  ) : null
-}
+   </StyledListingSection>
+)
 
 export default ProjectListingSection

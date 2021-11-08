@@ -36,8 +36,20 @@ module.exports = {
             url: "https://keen-strapi-backend.herokuapp.com/graphql",
          },
       },
+      {
+         resolve: "gatsby-source-strapi",
+         options: {
+            apiURL: "https://keen-strapi-backend.herokuapp.com",
+            contentTypes: [
+               // List of the Content Types you want to be able to request from Gatsby.
+               "articles",
+               "projects",
+            ],
+         },
+      },
       "gatsby-transformer-sharp",
       "gatsby-plugin-sharp",
+      "gatsby-plugin-fontawesome-css",
       // {
       //    resolve: `gatsby-plugin-manifest`,
       //    options: {

@@ -7,7 +7,8 @@ const activeClassName = "active"
 
 const StyledNav = styled.nav`
    margin-bottom: 1em;
-
+   max-width: 80%;
+   margin: 0 auto;
    @media (min-width: 520px) {
       margin-bottom: 2em;
    }
@@ -43,16 +44,6 @@ const ListElement = styled.div`
    @media (min-width: 768px) {
       width: 23rem;
    }
-
-   // &:after {
-   //    content: " ";
-   //    display: none;
-   //    white-space: pre;
-
-   //    @media (min-width: 520px) {
-   //       display: inline-block;
-   //    }
-   // }
 
    &:hover {
       background-color: blue;

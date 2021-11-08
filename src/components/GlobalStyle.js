@@ -6,10 +6,6 @@ const GlobalStyle = createGlobalStyle`
 
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap');
-  html, body {
-    height: 100%;
-    
-  }
 
   html {
     box-sizing: border-box;
@@ -17,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    height: 100vh;
     font-size: 30px;
     font-size: 1.6rem;
     font-family: 'Roboto Mono', monospace;
@@ -24,8 +21,6 @@ const GlobalStyle = createGlobalStyle`
     // white-space: pre-line;
     background-color: #202324;
     background-size: 40px 40px;
-  //  background-image:
-    //  linear-gradient(to right, white 1px, transparent 1px),
     background-image: radial-gradient(circle, white 1px, rgba(0, 0, 0, 0) 1px);
   }
 
@@ -147,39 +142,6 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  .blog-section {
-    font-size: 1.8rem;
-    color: white;
-    padding: 0 2em;
-    &:not(:first-child) {
-      margin-top: 2em;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      margin-bottom: 0.5em;
-
-      & + p {
-        margin-top: 0.5em;
-      }
-    }
-
-    ul {
-      margin-left: 1.5em;
-
-      @media (min-width: 520px) {
-        margin-left: 2.5em;
-      }
-    }
-
-    li {
-      margin: 0.5em 0;
-      line-height: 1.5em;
-
-      p {
-        margin: 0;
-      }
-    }
-  }
 
   :not(pre) > code[class*="language-"], pre[class*="language-"] {
     font-size: 0.9em;

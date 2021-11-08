@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import { Link } from "gatsby"
 
 const StyledContainer = styled.div`
    height: 350px;
@@ -17,10 +16,10 @@ const StyledContainer = styled.div`
 
 const StyledHeading = styled.h1`
    text-align: center;
-   font-size: 6em;
+   font-size: 6rem;
 
    @media (min-width: 768px) {
-      font-size: 9em;
+      font-size: 9rem;
    }
 `
 
@@ -42,6 +41,7 @@ const StyledLinkBlock = styled.div`
    width: 100%;
    display: block;
 `
+
 const IndexPage = () => (
    <Layout>
       <StyledContainer style={{ textAlign: "center", color: "white" }}>
@@ -62,7 +62,7 @@ const IndexPage = () => (
             </StyledSocialLinks>
          </StyledLinkBlock>
          <p style={{ color: "white" }}>Or contact me here:</p>
-         <div style={{ padding: "3em", margin: "auto" }}>
+         <div style={{ padding: "2rem", margin: "auto" }}>
             Email: keenballon@gmail.com
          </div>
       </StyledContainer>

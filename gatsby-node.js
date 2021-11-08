@@ -1,4 +1,5 @@
 exports.createPages = async ({ graphql, actions }) => {
+   // Create pages for the blog articles page only
    const { createPage } = actions
    const result = await graphql(
       `

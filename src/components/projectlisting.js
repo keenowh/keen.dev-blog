@@ -93,41 +93,36 @@ const imageStyle = {
 }
 
 const ProjectListing = ({ projects }) => {
-   const projectLinks = projects.map(project => {
-      // const tags = project.tags.tags.map((tag, index) => {
-      //   <StyledTags key={index}>#{tag}</StyledTags>
-      // })
-      const tagss = project.tags.tags.map((tag, index) => {
-         return <StyledTags key={index}>#{tag}</StyledTags>
-      })
+   // console.log()
+   const projectLinks = projects.allStrapiProjects.edges.map((project) => {
+      console.log(project.node)
 
-      const divStyle = {
-         padding: "1rem",
-      }
+      // const divStyle = {
+      //    padding: "1rem",
+      // }
 
       return (
-         <StyledProjectItem key={project.id}>
+         <StyledProjectItem key={project.node.id}>
             <div style={imageStyle}>
-               <img src={project.snapshot.url}></img>
+               <img src={project.node.snapshot.publicURL}></img>
             </div>
             <StyledLinkWrap>
-               <StyledProjectLink to={project.link}>
-                  {project.projectName}
+               <StyledProjectLink to={project.node.link}>
+                  {project.node.projectName}
                </StyledProjectLink>
             </StyledLinkWrap>
             <StyledLinkWrapGit>
-               <StyledProjectLink to={project.githubLink}>
+               <StyledProjectLink to={project.node.githubLink}>
                   Github
                </StyledProjectLink>
             </StyledLinkWrapGit>
             <StyledContent>
-               <StyledDesc>{project.description}</StyledDesc>
+               <StyledDesc>{project.node.description}</StyledDesc>
             </StyledContent>
-            <div style={divStyle}>{tagss}</div>
+            {/* <div style={divStyle}>{tagss}</div> */}
          </StyledProjectItem>
       )
    })
-   console.log(projectLinks)
    return <StyledProjectListing>{projectLinks}</StyledProjectListing>
 }
 
