@@ -3,7 +3,11 @@ import styled from "styled-components"
 import ProjectListing from "./projectlisting"
 
 const StyledListingSection = styled.section`
-   margin-bottom: 2rem;
+   width: 90%;
+   margin: 0 auto;
+   @media (min-width: 768px) {
+      width: 80%;
+   }
 `
 const StyledSectionHeading = styled.h2`
    margin-bottom: 0;

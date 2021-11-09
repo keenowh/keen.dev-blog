@@ -13,6 +13,7 @@ const query = graphql`
                   publicURL
                }
                githubLink
+               link
                description
                projectName
                id
