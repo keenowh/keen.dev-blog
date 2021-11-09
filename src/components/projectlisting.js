@@ -94,7 +94,6 @@ const TagsContainer = styled.div`
 `
 
 const ProjectListing = ({ projects }) => {
-   // console.log()
    const projectLinks = projects.allStrapiProjects.edges.map((project) => {
       console.log(project.node)
 
