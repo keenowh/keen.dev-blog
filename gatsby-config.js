@@ -33,15 +33,14 @@ module.exports = {
             // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
             fieldName: "strapi",
             // Url to query from
-            url: "https://keen-strapi-backend.herokuapp.com/graphql",
+            url: "https://keendev-strapi-backend.herokuapp.com/graphql",
          },
       },
       {
          resolve: "gatsby-source-strapi",
          options: {
             apiURL: "https://keendev-strapi-backend.herokuapp.com",
-            collectionTypes: ["articles", "projects"],
-            singleTypes: [`homepage`, `global`], // Defaults to 100
+            contentTypes: ["articles", "projects"], // Defaults to 100
             queryLimit: 1000,
          },
       },

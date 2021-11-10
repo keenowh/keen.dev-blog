@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 // import styled from "@emotion/styled/macro";
 // const DateSpan = styled.span`
 //   color: #999;
@@ -104,7 +103,7 @@ const ProjectListing = ({ projects }) => {
       return (
          <StyledProjectItem key={project.node.id}>
             <div style={imageStyle}>
-               <img src={project.node.snapshot.publicURL}></img>
+               <img alt="" src={project.node.snapshot.publicURL}></img>
             </div>
 
             <StyledLinkWrap>

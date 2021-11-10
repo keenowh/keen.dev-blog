@@ -6,12 +6,12 @@ import ReactMarkdown from "react-markdown"
 import Layout from "./../components/layout"
 
 export const query = graphql`
-   query($id: ID!) {
+   query ($id: ID!) {
       strapi {
          article(id: $id) {
             title
             content
-            published_at
+            publish_date
          }
       }
    }
