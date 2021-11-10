@@ -11,7 +11,7 @@ export const query = graphql`
          article(id: $id) {
             title
             content
-            publish_date
+            published_at
          }
       }
    }
@@ -47,7 +47,7 @@ const Article = ({ data }) => {
             <ReactMarkdown source={article.content} />
          </StyledP>
          <StyledPostDate>
-            <Moment format="MMM Do YYYY">{article.publish_date}</Moment>
+            <Moment format="MMM Do YYYY">{article.published_at}</Moment>
          </StyledPostDate>
       </Layout>
    )

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import BlogListing from "../components/bloglisting"
-const BlogPage = (props) => {
+const BlogPage = props => {
    return (
       <Layout>
          <BlogPageInner {...props} />
@@ -10,7 +10,7 @@ const BlogPage = (props) => {
    )
 }
 
-const BlogPageInner = (props) => {
+const BlogPageInner = props => {
    // console.log(props.data.allStrapiArticle.edges)
    return <BlogListing article={props.data.strapi.articles} />
 }
@@ -23,7 +23,7 @@ export const query = graphql`
          articles {
             id
             title
-            publish_date
+            published_at
          }
       }
    }
