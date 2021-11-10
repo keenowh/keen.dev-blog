@@ -12,7 +12,6 @@ module.exports = {
    },
    flags: {
       FAST_DEV: true,
-      FAST_REFRESH: true,
    },
    plugins: [
       {
@@ -41,11 +40,9 @@ module.exports = {
          resolve: "gatsby-source-strapi",
          options: {
             apiURL: "https://keendev-strapi-backend.herokuapp.com",
-            contentTypes: [
-               // List of the Content Types you want to be able to request from Gatsby.
-               "articles",
-               "projects",
-            ],
+            collectionTypes: ["articles", "projects"],
+            singleTypes: [`homepage`, `global`], // Defaults to 100
+            queryLimit: 1000,
          },
       },
       {
