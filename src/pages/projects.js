@@ -32,9 +32,7 @@ const ProjectsPageInner = () => {
          <h1>Projects</h1>
          <StaticQuery
             query={query}
-            render={(data) => (
-               <ProjectListingSection projects={data} sectionTitle="Personal" />
-            )}
+            render={(data) => <ProjectListingSection projects={data} />}
          />
       </div>
    )

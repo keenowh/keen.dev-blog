@@ -54,7 +54,7 @@ const BlogListing = ({ article }) => {
                <StyledBlogLink>{article.title}</StyledBlogLink>
             </Link>
             <DateSpan>
-               (<Moment format="MMM Do YYYY">{article.published_at}</Moment>)
+               (<Moment format="MMM Do YYYY">{article.publish_date}</Moment>)
             </DateSpan>
          </StyledBlogItem>
       )

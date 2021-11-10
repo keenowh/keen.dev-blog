@@ -13,9 +13,8 @@ const StyledSectionHeading = styled.h2`
    margin-bottom: 0;
 `
 
-const ProjectListingSection = ({ projects, sectionTitle }) => (
+const ProjectListingSection = ({ projects }) => (
    <StyledListingSection>
-      <StyledSectionHeading>{sectionTitle}</StyledSectionHeading>
       <ProjectListing projects={projects} />
    </StyledListingSection>
 )
