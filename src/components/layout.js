@@ -4,6 +4,7 @@ import Nav from "./nav"
 import { Link } from "gatsby"
 import GlobalStyle from "./GlobalStyle.js"
 import "prismjs/themes/prism.css"
+import SEO from "./seo"
 
 const Main = styled.main`
    // max-width: 83rem;
@@ -59,7 +60,7 @@ const Layout = ({ children }) => {
             </StyledTitle>
             <Nav />
          </StyledHeader>
-         {/* <Seo /> */}
+         <SEO />
          {children}
       </Main>
    )

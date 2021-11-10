@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+const SEO = ({ description, lang, meta, title }) => {
    const { site } = useStaticQuery(
       graphql`
          query {
@@ -18,6 +18,7 @@ function SEO({ description, lang, meta, title }) {
                siteMetadata {
                   title
                   description
+                  image
                }
             }
          }
@@ -25,40 +26,23 @@ function SEO({ description, lang, meta, title }) {
    )
 
    const metaDescription = description || site.siteMetadata.description
-
+   const image = site.siteMetadata.image
    return (
       <Helmet
          htmlAttributes={{
             lang,
          }}
          title={site.siteMetadata.title}
-         titleTemplate={`%s | ${site.siteMetadata.description}`}
+         titleTemplate={`%s`}
          link={[
             {
                rel: "stylesheet",
                href: "https://fonts.googleapis.com/css?family=Staatliches",
             },
-            {
-               rel: "stylesheet",
-               href:
-                  "https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css",
-            },
          ]}
-         script={[
-            {
-               src:
-                  "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js",
-            },
-            {
-               src:
-                  "https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js",
-            },
-            {
-               src:
-                  "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js",
-            },
-         ]}
+         script={[]}
          meta={[
+            { name: `image`, content: image },
             {
                name: `description`,
                content: metaDescription,
