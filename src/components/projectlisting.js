@@ -7,14 +7,19 @@ import styled from "styled-components"
 // `;
 
 const StyledProjectListing = styled.div`
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   grid-auto-rows: minmax(min-content, max-content);
+   display: block;
 
    @media (min-width: 768px) {
-      grid-template-columns: repeat(3, 1fr);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: minmax(min-content, max-content);
+      grid-gap: 15px;
    }
-   grid-gap: 15px;
+
+   // @media (min-width: 1080px) {
+   //    display: grid;
+   //    grid-gap: 15px;
+   // }
 `
 
 const StyledProjectItem = styled.div`
@@ -22,12 +27,16 @@ const StyledProjectItem = styled.div`
    // text-decoration: none;
    margin-bottom: 0.5em;
    line-height: 1.5em;
-   max-width: 350px;
+   max-width: 100%;
    border-radius: 10px;
    background-color: white;
    border: 2px solid white;
    margin-top: 1em;
    align-self: start;
+
+   // @media (min-width: 768px) {
+   //    max-width: 350px;
+   // }
 `
 
 const StyledLinkWrap = styled.span`
@@ -72,9 +81,10 @@ const StyledTags = styled.span`
    background-color: blue;
    color: white;
    margin-right: 1rem;
-   padding: 4px;
+   padding: 0 5px;
    font-size: 1.2rem;
    white-space: nowrap;
+   display: inline-flex;
 `
 
 const imageStyle = {
@@ -94,8 +104,6 @@ const TagsContainer = styled.div`
 
 const ProjectListing = ({ projects }) => {
    const projectLinks = projects.allStrapiProjects.edges.map((project) => {
-      console.log(project.node)
-
       const tags = project.node.tags.tags.map((tag) => (
          <StyledTags>{tag}</StyledTags>
       ))

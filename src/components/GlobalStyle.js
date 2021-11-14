@@ -7,13 +7,16 @@ const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap');
 
-  html {
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+   html {
     box-sizing: border-box;
     font-size: 62.5%;
   }
 
   body {
-    height: 100vh;
     font-size: 30px;
     font-size: 1.6rem;
     font-family: 'Roboto Mono', monospace;
@@ -26,12 +29,11 @@ const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     color: white;
-    font-family: 'Rubik', sans-serif;
     margin: 0.5em 0;
   }
 
   *, *:before, *:after {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
 
   img {

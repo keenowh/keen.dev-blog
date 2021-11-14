@@ -17,6 +17,14 @@ module.exports = {
       {
          resolve: "gatsby-plugin-styled-components",
       },
+      {
+         resolve: "gatsby-plugin-web-font-loader",
+         options: {
+            google: {
+               families: ["VT323", "Libre Barcode 128 Text", "Roboto Mono"],
+            },
+         },
+      },
       "gatsby-plugin-react-helmet",
       {
          resolve: `gatsby-source-filesystem`,

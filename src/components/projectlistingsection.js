@@ -6,7 +6,7 @@ const StyledListingSection = styled.section`
    width: 90%;
    margin: 0 auto;
    @media (min-width: 768px) {
-      width: 80%;
+      width: 100%;
    }
 `
 const StyledSectionHeading = styled.h2`

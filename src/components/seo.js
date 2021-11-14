@@ -49,7 +49,7 @@ const SEO = ({ description, lang, meta, title }) => {
             },
             {
                property: `og:title`,
-               content: title,
+               content: title || site.siteMetadata.title,
             },
             {
                property: `og:description`,
@@ -69,7 +69,7 @@ const SEO = ({ description, lang, meta, title }) => {
             },
             {
                name: `twitter:title`,
-               content: title,
+               content: title || site.siteMetadata.title,
             },
             {
                name: `twitter:description`,
@@ -81,6 +81,7 @@ const SEO = ({ description, lang, meta, title }) => {
 }
 
 SEO.defaultProps = {
+   title: null,
    lang: `en`,
    meta: [],
    description: ``,
@@ -90,7 +91,7 @@ SEO.propTypes = {
    description: PropTypes.string,
    lang: PropTypes.string,
    meta: PropTypes.arrayOf(PropTypes.object),
-   title: PropTypes.string.isRequired,
+   title: PropTypes.string,
 }
 
 export default SEO

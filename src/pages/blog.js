@@ -11,8 +11,11 @@ const BlogPage = (props) => {
 }
 
 const BlogPageInner = (props) => {
-   // console.log(props.data.allStrapiArticle.edges)
-   return <BlogListing article={props.data.strapi.articles} />
+   const assortedArticle = props.data.strapi.articles.sort((a, b) => {
+      return new Date(b.publish_date) - new Date(a.publish_date)
+   })
+
+   return <BlogListing article={assortedArticle} />
 }
 
 export default BlogPage

@@ -8,8 +8,11 @@ const activeClassName = "active"
 const StyledNav = styled.nav`
    margin-bottom: 1em;
    max-width: 80%;
+   display: block;
    margin: 0 auto;
    @media (min-width: 520px) {
+      display: flex;
+      justify-content: space-between;
       margin-bottom: 2em;
    }
 `
@@ -34,15 +37,10 @@ const ListElement = styled.div`
    font-size: 1.8rem;
    border-radius: 9px;
    border: solid white 3px;
-   @media (min-width: 300px) {
-      font-size: 2.2rem;
-      padding: 0.5rem 6rem;
-      width: 25rem;
-      margin-top: 10px;
-   }
-
    @media (min-width: 768px) {
-      width: 23rem;
+      font-size: 2.2rem;
+      padding: 0.5rem 4.5rem;
+      margin-top: 10px;
    }
 
    &:hover {
@@ -75,17 +73,15 @@ const NavItem = styled(Link).attrs({
 const Nav = () => {
    return (
       <StyledNav>
-         <StyledList>
-            <NavItem to="/blog/" activeClassName={activeClassName}>
-               <ListElement>/blog</ListElement>
-            </NavItem>
-            <NavItem to="/projects/" activeClassName={activeClassName}>
-               <ListElement>/project</ListElement>
-            </NavItem>
-            <NavItem to="/about/" activeClassName={activeClassName}>
-               <ListElement>/about</ListElement>
-            </NavItem>
-         </StyledList>
+         <NavItem to="/blog/" activeClassName={activeClassName}>
+            <ListElement>/blog</ListElement>
+         </NavItem>
+         <NavItem to="/projects/" activeClassName={activeClassName}>
+            <ListElement>/project</ListElement>
+         </NavItem>
+         <NavItem to="/about/" activeClassName={activeClassName}>
+            <ListElement>/about</ListElement>
+         </NavItem>
       </StyledNav>
    )
 }

@@ -7,16 +7,16 @@ import "prismjs/themes/prism.css"
 import SEO from "./seo"
 
 const Main = styled.main`
-   // max-width: 83rem;
-   // padding: 1em 1em 2em;
+   width: 90%;
    margin: 0 auto;
 
    @media (min-width: 350px) {
       padding: 1rem 1.5rem 4rem;
    }
 
-   @media (min-width: 520px) {
-      padding: 4rem 8rem 0;
+   @media (min-width: 1080px) {
+      padding: 1rem 8rem 0;
+      width: 70vw;
    }
 `
 const StyledHeader = styled.header``
