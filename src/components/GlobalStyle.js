@@ -4,9 +4,6 @@ import { createGlobalStyle } from "styled-components"
 const GlobalStyle = createGlobalStyle`
   ${normalize}
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap');
-
   *, *:before, *:after {
     box-sizing: border-box;
   }

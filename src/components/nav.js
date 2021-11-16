@@ -10,37 +10,46 @@ const StyledNav = styled.nav`
    max-width: 80%;
    display: block;
    margin: 0 auto;
+   @media (min-width: 1080px) {
+      max-width: 50%;
+   }
+
    @media (min-width: 520px) {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 2em;
    }
 `
 
-const StyledList = styled.div`
-   padding: 0;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-around;
-   margin-top: 0;
+// const StyledList = styled.div`
+//    padding: 0;
+//    display: flex;
+//    flex-wrap: wrap;
+//    justify-content: space-around;
+//    margin-top: 0;
 
-   @media (max-width: 520px) {
-      display: flex;
-      flex-direction: column;
-      margin-top: 0.5em;
-      align-content: center;
-   }
-`
+//    @media (max-width: 520px) {
+//       display: flex;
+//       flex-direction: column;
+//       margin-top: 0.5em;
+//       align-content: center;
+//    }
+// `
 
 const ListElement = styled.div`
    text-align: center;
    font-size: 1.8rem;
    border-radius: 9px;
+   padding: 0.5rem 1.5rem;
+
    border: solid white 3px;
+   // @media (max-width: 768px) {
+   //    margin-bottom: 10px;
+   // }
+
    @media (min-width: 768px) {
       font-size: 2.2rem;
       padding: 0.5rem 4.5rem;
-      margin-top: 10px;
+      // margin-top: 10px;
    }
 
    &:hover {

@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
    siteMetadata: {
-      title: "keen.dev",
+      title: "Keen Ballon",
       description: "Blogsite",
       author: "Keen Ballon",
       siteUrl: "http://keendev.netlify.app",
@@ -25,6 +25,7 @@ module.exports = {
             },
          },
       },
+      `gatsby-plugin-preload-fonts`,
       "gatsby-plugin-react-helmet",
       {
          resolve: `gatsby-source-filesystem`,

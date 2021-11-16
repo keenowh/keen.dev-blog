@@ -8,6 +8,10 @@ const WindowContainer = styled.div`
    margin: 2rem auto;
    box-shadow: 0 0.25rem 0.5rem #12181e;
    border-radius: 0 0 0.1rem 0.1rem;
+
+   @media (max-width: 1080px) {
+      width: 90%;
+   }
 `
 
 const WindowBar = styled.div`
@@ -74,6 +78,10 @@ const WindowCommand = styled.span`
    color: #32c146;
 `
 
+const TerminalLink = styled.a`
+   color: lightblue;
+`
+
 const About = () => (
    <Layout>
       <WindowContainer>
@@ -97,10 +105,14 @@ const About = () => (
                $ <WindowCommand>show resume.pdf</WindowCommand>
             </WindowPre>
             <div style={{ color: "white", marginLeft: "2rem" }}>
-               ================
-               <br />| <a href="resume.pdf">Resume Page</a> |
+               ===============
+               <br />|{"   "}
+               <TerminalLink href="https://s3-resume-bucket-lab.s3.amazonaws.com/Resume.pdf">
+                  Resume Page
+               </TerminalLink>
+               {"   "}|
                <br />
-               ================
+               ===============
             </div>
          </WindowBody>
       </WindowContainer>

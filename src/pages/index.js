@@ -4,13 +4,19 @@ import Layout from "../components/layout"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 const StyledContainer = styled.div`
-   width: 350px;
    padding: 20px;
    font-family: "VT323", monospace !important;
    background: #fff;
-   margin: 1rem auto;
+   margin: 2rem auto 0;
    box-shadow: 5px 5px 19px black;
    color: black;
+   @media (min-width: 1080px) {
+      margin: auto auto;
+   }
+
+   @media (min-width: 376px) {
+      width: 350px;
+   }
 `
 
 const StyledHeading = styled.h1`
@@ -68,41 +74,52 @@ const BarcodeBlock = styled.div`
    font-size: 35px;
 `
 
+const ReceiptWrapper = styled.div`
+   display: flex;
+   align-content: center;
+   justify-content: center;
+`
+
 const IndexPage = () => (
    <Layout>
-      <StyledContainer style={{ textAlign: "center", color: "white" }}>
-         <StyledHeading>Hello!</StyledHeading>
-         <StyledStatementBlock>
-            <p
-               style={{
-                  margin: "0",
-                  color: "black",
-                  lineHeight: "1",
-               }}
-            >
-               I'm Keen, a web-developer curious in the backend and cloud
-               engineering
+      <ReceiptWrapper>
+         <StyledContainer style={{ textAlign: "center", color: "white" }}>
+            <StyledHeading>Hello!</StyledHeading>
+            <StyledStatementBlock>
+               <p
+                  style={{
+                     margin: "0",
+                     color: "black",
+                     lineHeight: "1",
+                  }}
+               >
+                  I'm Keen, a web-developer curious in the backend and cloud
+                  engineering
+               </p>
+            </StyledStatementBlock>
+            <StyledLinkHeading>
+               Find me in one of these links:
+            </StyledLinkHeading>
+            <StyledLinkBlock>
+               <StyledSocialLinks href="http://github.com/keenowh">
+                  <FaGithub style={{ marginRight: "10px" }} />
+                  Github
+               </StyledSocialLinks>
+               <StyledSocialLinks href="https://www.linkedin.com/in/keen-ballon/">
+                  <FaLinkedin />
+                  LinkedIn
+               </StyledSocialLinks>
+            </StyledLinkBlock>
+            <ReceiptBreak>************************************</ReceiptBreak>
+            <p style={{ color: "black", margin: "0" }}>Or contact me here:</p>
+            <BarcodeBlock>keenballon@gmail.com</BarcodeBlock>
+            <ReceiptBreak>************************************</ReceiptBreak>
+            <p style={{ color: "black", margin: "0", fontSize: "1.6rem" }}>
+               © {new Date().getFullYear()} Keen Renzo Ballon. All rights
+               reserved.
             </p>
-         </StyledStatementBlock>
-         <StyledLinkHeading>Find me in one of these links:</StyledLinkHeading>
-         <StyledLinkBlock>
-            <StyledSocialLinks href="http://github.com/keenowh">
-               <FaGithub />
-               Github
-            </StyledSocialLinks>
-            <StyledSocialLinks href="http://linkedin.com/keen-ballon">
-               <FaLinkedin />
-               LinkedIn
-            </StyledSocialLinks>
-         </StyledLinkBlock>
-         <ReceiptBreak>************************************</ReceiptBreak>
-         <p style={{ color: "black", margin: "0" }}>Or contact me here:</p>
-         <BarcodeBlock>keenballon@gmail.com</BarcodeBlock>
-         <ReceiptBreak>************************************</ReceiptBreak>
-         <p style={{ color: "black", margin: "0", fontSize: "1.6rem" }}>
-            © {new Date().getFullYear()} Keen Renzo Ballon. All rights reserved.
-         </p>
-      </StyledContainer>
+         </StyledContainer>
+      </ReceiptWrapper>
    </Layout>
 )
 

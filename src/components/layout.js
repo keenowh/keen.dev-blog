@@ -9,17 +9,17 @@ import SEO from "./seo"
 const Main = styled.main`
    width: 90%;
    margin: 0 auto;
-
-   @media (min-width: 350px) {
-      padding: 1rem 1.5rem 4rem;
-   }
-
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-content: center;
+`
+const StyledHeader = styled.header`
    @media (min-width: 1080px) {
-      padding: 1rem 8rem 0;
-      width: 70vw;
+      height: 120px;
    }
 `
-const StyledHeader = styled.header``
 
 const TitleLink = styled(Link)`
    text-transform: lowercase;
@@ -38,14 +38,15 @@ const TitleLink = styled(Link)`
 
 const StyledTitle = styled.h1`
    // margin-bottom: 2rem;
-   margin: 0.3em 0;
-
+   padding: 0.3em 0;
+   margin: 0;
+   text-align: center;
    @media (min-width: 350px) {
-      margin: 0.5em 0 0.2em;
+      padding: 0.5em 0 0.2em;
    }
 
    @media (min-width: 520px) {
-      margin: 0.667em 0;
+      padding: 0.667em 0;
    }
 `
 
