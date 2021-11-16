@@ -17,11 +17,31 @@ module.exports = {
       {
          resolve: "gatsby-plugin-styled-components",
       },
+      // {
+      //    resolve: "gatsby-plugin-web-font-loader",
+      //    options: {
+      //       google: {
+      //          families: ["VT323", "Libre Barcode 128 Text", "Roboto Mono"],
+      //       },
+      //    },
+      // },
       {
-         resolve: "gatsby-plugin-web-font-loader",
+         resolve: `gatsby-plugin-webfonts`,
          options: {
-            google: {
-               families: ["VT323", "Libre Barcode 128 Text", "Roboto Mono"],
+            fonts: {
+               google: [
+                  {
+                     family: `VT323`,
+                     variants: [`400`],
+                  },
+                  {
+                     family: `Libre Barcode 128 Text`,
+                     variants: [`400`],
+                  },
+                  {
+                     family: `Roboto Mono`,
+                  },
+               ],
             },
          },
       },
