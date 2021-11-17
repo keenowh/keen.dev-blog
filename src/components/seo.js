@@ -34,12 +34,12 @@ const SEO = ({ description, lang, meta, title }) => {
          }}
          title={site.siteMetadata.title}
          titleTemplate={`%s`}
-         link={[
-            {
-               rel: "stylesheet",
-               href: "https://fonts.googleapis.com/css?family=Staatliches",
-            },
-         ]}
+         // link={[
+         //    {
+         //       rel: "stylesheet",
+         //       href: "https://fonts.googleapis.com/css?family=Staatliches",
+         //    },
+         // ]}
          script={[]}
          meta={[
             { name: `image`, content: image },

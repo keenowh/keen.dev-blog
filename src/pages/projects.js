@@ -29,7 +29,6 @@ const query = graphql`
 const ProjectsPageInner = () => {
    return (
       <div>
-         <h1>Projects</h1>
          <StaticQuery
             query={query}
             render={(data) => <ProjectListingSection projects={data} />}

@@ -45,8 +45,8 @@ const ReceiptContainer = styled.div`
    box-shadow: 5px 5px 19px black;
    color: black;
 
-   &media (min-width: 768px) {
-      width: 70%;
+   @media (min-width: 768px) {
+      width: 60%;
    }
 `
 const AsteriskBorder = styled.div`

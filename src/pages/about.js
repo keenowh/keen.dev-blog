@@ -107,7 +107,10 @@ const About = () => (
             <div style={{ color: "white", marginLeft: "2rem" }}>
                ===============
                <br />|{"   "}
-               <TerminalLink href="https://s3-resume-bucket-lab.s3.amazonaws.com/Resume.pdf">
+               <TerminalLink
+                  target="_blank"
+                  href="https://s3-resume-bucket-lab.s3.amazonaws.com/Resume.pdf"
+               >
                   Resume Page
                </TerminalLink>
                {"   "}|

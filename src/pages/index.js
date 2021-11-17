@@ -75,9 +75,10 @@ const BarcodeBlock = styled.div`
 `
 
 const ReceiptWrapper = styled.div`
-   display: flex;
-   align-content: center;
-   justify-content: center;
+   // display: flex;
+   // align-content: center;
+   // justify-content: center;
+   
 `
 
 const IndexPage = () => (

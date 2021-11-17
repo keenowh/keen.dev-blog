@@ -42,11 +42,11 @@ const StyledTitle = styled.h1`
    margin: 0;
    text-align: center;
    @media (min-width: 350px) {
-      padding: 0.5em 0 0.2em;
+      padding: 0.5rem 0 0.2rem;
    }
 
    @media (min-width: 520px) {
-      padding: 0.667em 0;
+      padding: 1rem 0;
    }
 `
 
