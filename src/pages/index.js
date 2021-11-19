@@ -69,7 +69,7 @@ const EmailBlock = styled.div`
 `
 
 const BarcodeBlock = styled.div`
-   font-family: "Libre Barcode 128 Text", cursive;
+   font-family: "Libre Barcode 128 Text";
    color: black;
    font-size: 35px;
 `
@@ -78,7 +78,6 @@ const ReceiptWrapper = styled.div`
    // display: flex;
    // align-content: center;
    // justify-content: center;
-   
 `
 
 const IndexPage = () => (

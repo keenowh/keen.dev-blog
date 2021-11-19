@@ -6,6 +6,8 @@
   "author": "Keen",
   "dependencies": {
     "@emotion/styled": "^11.1.5",
+    "@fontsource/libre-barcode-128-text": "^4.5.0",
+    "@fontsource/vt323": "^4.5.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "caniuse-lite": "^1.0.30001279",
     "gatsby": "^3.1.2",
