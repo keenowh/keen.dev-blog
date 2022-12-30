@@ -25,7 +25,7 @@
     "gatsby-plugin-webfonts": "^2.2.0",
     "gatsby-source-filesystem": "^3.1.0",
     "gatsby-source-graphql": "^3.1.0",
-    "gatsby-source-strapi": "0.0.12",
+    "gatsby-source-strapi": "3.0.2",
     "gatsby-transformer-sharp": "^3.1.0",
     "moment": "^2.29.1",
     "prismjs": "^1.23.0",
